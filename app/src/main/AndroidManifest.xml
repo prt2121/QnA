@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.prt2121.qna" >
+
+    <uses-permission android:name="com.google.android.glass.permission.DEVELOPMENT" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.prt2121.qna.QuestionActivity"
+            android:label="@string/title_activity_question" >
+            <intent-filter>
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.google.android.glass.VoiceTrigger"
+                android:resource="@xml/voice_trigger_start" />
+        </activity>
+        <activity
+            android:name="com.prt2121.qna.AnswerActivity"
+            android:label="@string/title_activity_answer" >
+        </activity>
+        <activity
+            android:name="com.prt2121.qna.PreviousAnswersActivity"
+            android:label="@string/title_activity_previous_answers" >
+        </activity>
+    </application>
+
+</manifest>
